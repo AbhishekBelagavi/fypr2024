@@ -1,0 +1,191 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - IFAKE</title>
+    <meta name="description" content="Forgery Detection web app">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="{% static 'assets/css/Footer-Dark.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .navbar-custom {
+            background-color: #333 !important;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .masthead {
+            background-color: #111;
+        }
+
+        .masthead-content {
+            color: #fff;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .section-content {
+            color: #fff;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .bg-circle {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer {
+            background-color: #000 !important;
+        }
+
+        .footer p {
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#home">FauxFind</a>
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="masthead text-center text-white" id ="home">
+        <div class="masthead-content">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">FAUXFIND</h1>
+                <h2 class="masthead-subheading mb-0">Image/Video Forgery Detection</h2>
+                {% comment %} <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="{% url 'pdf' %}" style="margin-right: 10px;">PDF IFAKE</a> {% endcomment %}
+                <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="{% url 'image' %}" style="margin-right: 10px;">Image </a>
+                <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="{% url 'video' %}" style="margin-left: 10px;">Video</a></div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <section>
+        <div class="container" id="about">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="{% static 'assets/img/retouching.png' %}"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Image Forgery</h2>
+                        <p><strong>"Image authentication is crucial for verifying evidence integrity, especially in legal contexts. Advanced tools and algorithms aid forensic investigations to detect tampering accurately. This ensures the reliability of evidence in court proceedings, upholding truth and justice."</strong><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="{% static 'assets/img/video-forgery.jpg' %}"></div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <h2 class="display-4">Video Forgery</h2>
+                        <p>Video Forgery is thus&nbsp;<strong>a technique of generating altered or fake videos by combining, altering or creating new video</strong>. Thus the authenticity of such digital videos is questionable and needs to be verified.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container" id="Contact">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="{% static 'assets/img/ifake.jpg' %}"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4"><strong>FAUXFIND</strong><br></h2>
+                        <p>FAUXFIND is a web app which helps in detecting forgery of images and videos. The best part about ifake is, It can be accessed from anywhere anytime.&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5 bg-black" >
+        <div class="container">
+            <p class="text-center text-white m-0 small">All rights reserved &nbsp;© IFAKE 2024 |<br> Team Members: Abhishek Belagavi, Chinmayi R, Sahana MS, Chandana Purdal</p>
+        </div>
+    </footer>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            // Smooth scrolling
+            $('a[href^="#"]').on('click', function (event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+
+            // Animation on scroll
+            $(window).scroll(function () {
+                $('.section-content').each(function () {
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if (bottom_of_window > bottom_of_object) {
+                        $(this).animate({
+                            opacity: 1,
+                            transform: 'translateY(0)'
+                        }, 800);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
