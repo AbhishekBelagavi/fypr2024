@@ -54,6 +54,67 @@ Contributions to this project are welcome. To contribute:
 4. Push to the branch (`git push origin feature/your-feature-name`).
 5. Create a new Pull Request.
 
+## Repo structure
+IFAKE_Project/
+│
+├── IFAKE_AI/
+│   ├── IMAGEWEIGHTS/
+│   │   ├── proposed_ela_50_casia_fidac.h5
+│   │   └── segmenter_weights.h5
+│   │
+│   ├── VideoForgeryClassification/
+│   │   ├── Data_Preprocessing.ipynb
+│   │   ├── Model_Training.ipynb
+│   │   ├── Model_Testing.ipynb
+│   │   ├── VideoForgeryDetection.ipynb
+│   │   └── ImageForgeryClassification.ipynb
+│   │
+│   ├── models/
+│   │   ├── neural_nets.py
+│   │   ├── fake_image_detector.py
+│   │   └── other_model_files.py
+│   │
+│   └── scripts/
+│       ├── copy_move_cfa.py
+│       ├── copy_move_sift.py
+│       └── other_scripts.py
+│
+├── IFAKE_WebApp/
+│   ├── IFAKE_WebApp/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   │
+│   ├── website/
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── migrations/
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   │
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── image.html
+│   │   ├── pdf.html
+│   │   └── video.html
+│   │
+│   └── manage.py
+│
+├── .gitignore
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+└── requirements.txt
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
